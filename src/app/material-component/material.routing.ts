@@ -20,15 +20,20 @@ import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {RecetasComponent} from "./recetas/recetas.component";
 
 import {MisDatosComponent} from "./mis-datos/mis-datos.component";
+import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component";
 
 export const MaterialRoutes: Routes = [
   {
-    path: 'button',
-    component: ButtonsComponent
-  },
-  {
     path: 'mis-datos',
     component: MisDatosComponent
+  },
+  {
+    path: 'mis-atenciones',
+    component: MisAtencionesComponent
+  },
+  {
+    path: 'button',
+    component: ButtonsComponent
   },
   {
     path: 'grid',
