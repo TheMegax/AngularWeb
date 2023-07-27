@@ -31,6 +31,7 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import {MisDatosComponent} from "./mis-datos/mis-datos.component";
+import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component";
 
 @NgModule({
   imports: [
@@ -44,6 +45,7 @@ import {MisDatosComponent} from "./mis-datos/mis-datos.component";
 
     ButtonsComponent,
     MisDatosComponent,
+    MisAtencionesComponent,
     GridComponent,
     ListsComponent,
     MenuComponent,
