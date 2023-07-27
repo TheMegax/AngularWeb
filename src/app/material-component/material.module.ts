@@ -32,6 +32,7 @@ import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import {ImagenesComponent} from "./imagenes/imagenes.component";
 import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {MisDatosComponent} from "./mis-datos/mis-datos.component";
+import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component";
 
 @NgModule({
   imports: [
@@ -46,6 +47,7 @@ import {MisDatosComponent} from "./mis-datos/mis-datos.component";
     ImagenesComponent,
     InterconsultaComponent,
     MisDatosComponent,
+    MisAtencionesComponent,
     GridComponent,
     ListsComponent,
     MenuComponent,
