@@ -30,6 +30,7 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
+import {MisDatosComponent} from "./mis-datos/mis-datos.component";
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
     CdkTableModule,
 
     ButtonsComponent,
+    MisDatosComponent,
     GridComponent,
     ListsComponent,
     MenuComponent,

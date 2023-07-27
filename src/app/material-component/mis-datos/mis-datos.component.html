@@ -1,0 +1,117 @@
+<!-- ============================================================== -->
+<!-- Basic-->
+<!-- ============================================================== -->
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Mis Datos</mat-card-title>
+  </mat-card-content>
+</mat-card>
+<!-- ============================================================== -->
+<!-- As an Accordion -->
+<!-- ============================================================== -->
+<mat-card>
+  <mat-card-content>
+    <mat-accordion class="example-headers-align">
+      <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Información Personal </mat-panel-title>
+          <mat-icon>account_circle</mat-icon>
+        </mat-expansion-panel-header>
+        <mat-form-field>
+          <mat-label> Nombres </mat-label>
+          <input matInput placeholder="Ej: John Richard" [formControl]="req_nombres">
+          <mat-error *ngIf="req_nombres.hasError('required')">{{'Debes entrar un valor'}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label> Apellido Paterno </mat-label>
+          <input matInput placeholder="Ej: Doe" [formControl]="req_apellido1">
+          <mat-error *ngIf="req_apellido1.hasError('required')">{{'Debes entrar un valor'}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label> Apellido Materno </mat-label>
+          <input matInput placeholder="Ej: Rick" [formControl]="req_apellido2">
+          <mat-error *ngIf="req_apellido2.hasError('required')">{{'Debes entrar un valor'}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label> Edad </mat-label>
+          <input matInput type="number" min="1" [formControl]="req_edad">
+          <mat-error *ngIf="req_edad.hasError('required')">{{'Debes entrar un valor'}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label> RUT </mat-label>
+          <input matInput placeholder="Ej: 12345678-9" [formControl]="req_rut">
+          <mat-error *ngIf="req_rut.hasError('required')">{{'Debes entrar un valor'}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label> Sexo </mat-label>
+          <mat-select [formControl]="req_sexo">
+            <mat-option *ngFor="let gender of genders" [value]="gender.value">
+              {{gender.viewValue}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="req_sexo.hasError('required')">{{'Debes seleccionar un valor'}}</mat-error>
+        </mat-form-field>
+        <mat-checkbox [(ngModel)]="disabled">
+          Transgénero
+        </mat-checkbox>
+        <mat-form-field [class.cdk-visually-hidden]="!disabled">
+          <mat-label>Nombre Social </mat-label>
+          <input matInput placeholder="Ej: Jane"> </mat-form-field>
+        <mat-action-row>
+          <button mat-button color="primary" (click)="nextStep()">Siguiente</button>
+        </mat-action-row>
+
+      </mat-expansion-panel>
+      <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Contacto </mat-panel-title>
+          <mat-icon>call</mat-icon>
+        </mat-expansion-panel-header>
+        <mat-form-field>
+          <mat-label> Correo </mat-label>
+          <input matInput placeholder="Ej: john.doe@gmail.com" [formControl]="email">
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label> Teléfono 1 </mat-label>
+          <input matInput placeholder="Ej: +56912345678" [formControl]="req_telefono">
+          <mat-error *ngIf="req_telefono.hasError('required')">{{'Debes entrar un valor'}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label> Teléfono 2 </mat-label>
+          <input matInput placeholder="Ej: +56912345678"> </mat-form-field>
+        <mat-form-field>
+          <mat-label> Teléfono 3 </mat-label>
+          <input matInput placeholder="Ej: +56912345678"> </mat-form-field>
+        <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Previo</button>
+          <button mat-button color="primary" (click)="nextStep()">Siguiente</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+      <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Dirección </mat-panel-title>
+          <mat-icon>pin_drop</mat-icon>
+        </mat-expansion-panel-header>
+        <mat-form-field>
+          <mat-label> Correo </mat-label>
+          <input matInput placeholder="Ej: john.doe@gmail.com" [formControl]="email">
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label> Teléfono 1 </mat-label>
+          <input matInput placeholder="Ej: +56912345678" [formControl]="req_telefono">
+          <mat-error *ngIf="req_telefono.hasError('required')">{{'Debes entrar un valor'}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label> Teléfono 2 </mat-label>
+          <input matInput placeholder="Ej: +56912345678"> </mat-form-field>
+        <mat-form-field>
+          <mat-label> Teléfono 3 </mat-label>
+          <input matInput placeholder="Ej: +56912345678"> </mat-form-field>
+        <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Previo</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card-content>
+</mat-card>
