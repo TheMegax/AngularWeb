@@ -9,6 +9,9 @@ export interface Menu {
 
 const MENUITEMS = [
   { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
+  { state: 'imagenes', name: 'Mis imagenes', type: 'link', icon: 'av_timer' },
+  { state: 'interconsulta', name: 'Mis interconsultas', type: 'link', icon: 'av_timer' },
+  { state: 'recetas', name: 'Mis recetas', type: 'link', icon: 'av_timer' },
   { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
   { state: 'mis-datos', type: 'link', name: 'Mis Datos', icon: 'badge' },
   { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
