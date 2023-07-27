@@ -30,6 +30,8 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
+import {ImagenesComponent} from "./imagenes/imagenes.component";
+import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 
 @NgModule({
   imports: [
@@ -40,8 +42,9 @@ import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
     FormsModule,
     ReactiveFormsModule,
     CdkTableModule,
-
     ButtonsComponent,
+    ImagenesComponent,
+    InterconsultaComponent,
     GridComponent,
     ListsComponent,
     MenuComponent,

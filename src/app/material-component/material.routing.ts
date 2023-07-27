@@ -16,6 +16,10 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
+import {ImagenesComponent} from "./imagenes/imagenes.component";
+import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
+import {RecetasComponent} from "./recetas/recetas.component";
+
 
 export const MaterialRoutes: Routes = [
   {
@@ -25,6 +29,18 @@ export const MaterialRoutes: Routes = [
   {
     path: 'grid',
     component: GridComponent
+  },
+  {
+    path: 'imagenes',
+    component: ImagenesComponent
+  },
+  {
+    path: 'recetas',
+    component: RecetasComponent
+  },
+  {
+    path: 'interconsulta',
+    component: InterconsultaComponent
   },
   {
     path: 'lists',
