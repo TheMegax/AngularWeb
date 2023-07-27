@@ -41,7 +41,6 @@ import {MisDatosComponent} from "./mis-datos/mis-datos.component";
     FormsModule,
     ReactiveFormsModule,
     CdkTableModule,
-
     ButtonsComponent,
     MisDatosComponent,
     GridComponent,
