@@ -7,7 +7,7 @@ import { ActivityTimelineComponent } from './dashboard-components/activity-timel
 @Component({
 	selector: 'app-dashboard',
 	standalone: true,
-	imports: [SalesOverviewComponent, OurVisiterComponent, ProfileComponent, ActivityTimelineComponent],
+	imports: [SalesOverviewComponent, ProfileComponent, ActivityTimelineComponent],
 	templateUrl: './dashboard.component.html'
 })
 export class DashboardComponent implements AfterViewInit {
