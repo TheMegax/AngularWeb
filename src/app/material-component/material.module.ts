@@ -30,8 +30,12 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
+<<<<<<< HEAD
 import {ImagenesComponent} from "./imagenes/imagenes.component";
 import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
+=======
+import {MisDatosComponent} from "./mis-datos/mis-datos.component";
+>>>>>>> Rchangl
 
 @NgModule({
   imports: [
@@ -43,8 +47,12 @@ import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
     ReactiveFormsModule,
     CdkTableModule,
     ButtonsComponent,
+<<<<<<< HEAD
     ImagenesComponent,
     InterconsultaComponent,
+=======
+    MisDatosComponent,
+>>>>>>> Rchangl
     GridComponent,
     ListsComponent,
     MenuComponent,

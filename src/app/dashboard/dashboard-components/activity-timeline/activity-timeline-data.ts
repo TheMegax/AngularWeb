@@ -11,12 +11,12 @@ export interface Activity{
 
 export const activities:Activity[]=[
     {
-        name:'Nirav joshi',
-        image:'assets/images/users/1.jpg',
-        commentTime:'5 minute ago',
-        comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.',
+        name:'Ministerio de Salud',
+        image:'assets/images/News/unnamed.jpg',
+        commentTime:'',
+        comment:'Campaña Invierno 2023: Cuidémonos de las enfermedades respiratorias https://www.minsal.cl/campana-enfermedades-respiratorias/',
     
-        bottomImage:'assets/images/big/img2.jpg',
+        bottomImage:'assets/images/News/Campana-InviernoMASCARILLA_Banners-Web_660x200.png',
         buttonColor:''
     
     },
