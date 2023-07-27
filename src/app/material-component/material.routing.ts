@@ -16,14 +16,11 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
-<<<<<<< HEAD
 import {ImagenesComponent} from "./imagenes/imagenes.component";
 import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {RecetasComponent} from "./recetas/recetas.component";
 
-=======
 import {MisDatosComponent} from "./mis-datos/mis-datos.component";
->>>>>>> Rchangl
 
 export const MaterialRoutes: Routes = [
   {
