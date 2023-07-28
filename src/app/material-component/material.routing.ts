@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-
 import { ButtonsComponent } from './buttons/buttons.component';
 import { GridComponent } from './grid/grid.component';
 import { ListsComponent } from './lists/lists.component';
@@ -23,6 +22,7 @@ import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {RecetasComponent} from "./recetas/recetas.component";
 import {ApiTestComponent} from "./api-test/api-test.component";
 import {SolicitudesComponent} from "./solicitudes/solicitudes.component";
+import {RecetasComponent} from "./recetas/recetas.component";
 export const MaterialRoutes: Routes = [
   {
     path: 'mis-datos',
@@ -47,6 +47,10 @@ export const MaterialRoutes: Routes = [
   {
     path: 'mis-solicitudes',
     component: SolicitudesComponent
+  },
+  {
+    path: 'mis-recetas',
+    component: RecetasComponent
   },
   {
     path: 'button',
