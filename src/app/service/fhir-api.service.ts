@@ -3,18 +3,17 @@ import { environment } from '../../environments/environment';
 import axios from 'axios';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FhirApiService {
-
-  constructor() { }
+  constructor() {}
   getPatientById(id: string) {
     const url = `${environment.fhirApi}/Patient/${id}`;
     return axios.get(url, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${environment.apikey}`
-      }
+        Authorization: `Bearer ${environment.apikey}`,
+      },
     });
   }
   getPatientByName(name: string) {
@@ -22,8 +21,8 @@ export class FhirApiService {
     return axios.get(url, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${environment.apikey}`
-      }
+        Authorization: `Bearer ${environment.apikey}`,
+      },
     });
   }
   getPatientByGivenName(given: string) {
@@ -31,8 +30,8 @@ export class FhirApiService {
     return axios.get(url, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${environment.apikey}`
-      }
+        Authorization: `Bearer ${environment.apikey}`,
+      },
     });
   }
   getPatientByFamilyName(family: string) {
@@ -40,8 +39,17 @@ export class FhirApiService {
     return axios.get(url, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${environment.apikey}`
-      }
+        Authorization: `Bearer ${environment.apikey}`,
+      },
+    });
+  }
+  getAppointmentByPatientId(id: string) {
+    const url = `${environment.fhirApi}/Appointment?patient=${id}`;
+    return axios.get(url, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${environment.apikey}`,
+      },
     });
   }
   getPatientByRUN(run: string) {
@@ -49,8 +57,8 @@ export class FhirApiService {
     return axios.get(url, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${environment.apikey}`
-      }
+        Authorization: `Bearer ${environment.apikey}`,
+      },
     });
-  }  
+  }
 }
