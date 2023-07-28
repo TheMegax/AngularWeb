@@ -1,0 +1,92 @@
+<!-- ============================================================== -->
+<!-- Basic-->
+<!-- ============================================================== -->
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Mis solicitudes ciudadanas</mat-card-title>
+  </mat-card-content>
+</mat-card>
+<!-- ============================================================== -->
+<!-- As an Accordion -->
+<!-- ============================================================== -->
+<mat-card class="mid-class">
+  <mat-card-content>
+    <mat-accordion class="example-headers-align" >
+      <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Solicitudes </mat-panel-title>
+          <mat-icon>account_circle</mat-icon>
+        </mat-expansion-panel-header>
+
+
+        <div class="row">
+          <!-- Card column -->
+          <div class="col-12">
+            <mat-card>
+              <mat-card-content>
+                <mat-card-title></mat-card-title>
+
+                <mat-horizontal-stepper [linear]="isLinear">
+                  <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                      <ng-template matStepLabel>Selección</ng-template>
+                      <mat-form-field>
+                        <mat-card-title>Seleccion de comentario</mat-card-title>
+                        <mat-card-subtitle>Su opinion sera respondida en alrededor de 20 a 30 días</mat-card-subtitle>
+
+                        <div class="example-tooltip-host" matTooltip="Tooltip!" [matTooltipPosition]="position">
+                          <span> Seleccione su tipo de comentario </span>
+                          <mat-form-field>
+                            <mat-select class="example-select" [(ngModel)]="position">
+                              <mat-option value="Opinion">Opinion</mat-option>
+                              <mat-option value="Queja">Queja</mat-option>
+                              <mat-option value="Reclamo">Reclamo</mat-option>
+                              <mat-option value="Agradecimiento">Agradecimiento</mat-option>
+                            </mat-select >
+                          </mat-form-field >
+                        </div>
+                      </mat-form-field>
+                      <div>
+                        <button mat-raised-button color="warn" matStepperNext>Siguiente</button>
+                      </div>
+                    </form>
+                  </mat-step>
+                  <mat-step [stepControl]="secondFormGroup">
+                    <form [formGroup]="secondFormGroup">
+                      <ng-template matStepLabel>Comentario</ng-template>
+                      <mat-form-field>
+                        <input matInput placeholder="Escriba su comentario aquí" formControlName="secondCtrl" required>
+                      </mat-form-field>
+                      <div>
+                        <button mat-raised-button color="accent" matStepperPrevious>Atrás</button>
+                        <button mat-raised-button color="warn" matStepperNext>Siguiente</button>
+                      </div>
+                    </form>
+                  </mat-step>
+                  <mat-step>
+                    <ng-template matStepLabel>Listo</ng-template>
+                    La respuesta llegará a tu correo de 20 a 30 días.
+                    Muchas gracias.
+                    <div>
+                      <button mat-raised-button color="accent" matStepperPrevious>Atrás</button>
+                    </div>
+                  </mat-step>
+                </mat-horizontal-stepper>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+
+        <mat-form-field [class.cdk-visually-hidden]="!disabled">
+          <mat-label>Su texto</mat-label>
+          <input matInput placeholder=""> </mat-form-field>
+        <mat-action-row [(ngModel)]="disabled" >
+          <button mat-button color="primary" (click)="nextStep()">Finalizar</button>
+        </mat-action-row>
+
+      </mat-expansion-panel>
+      <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle="true">
+      </mat-expansion-panel>
+</mat-accordion>
+  </mat-card-content>
+</mat-card>
