@@ -19,5 +19,7 @@ export const activities:Activity[]=[
         bottomImage:'assets/images/News/Campana-InviernoMASCARILLA_Banners-Web_660x200.png',
         buttonColor:''
 
+
+
     }
 ]

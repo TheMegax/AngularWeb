@@ -36,7 +36,7 @@ import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {SolicitudesComponent} from "./solicitudes/solicitudes.component";
 import {ImagenesComponent} from "./imagenes/imagenes.component";
 import {RecetasComponent} from "./recetas/recetas.component";
-
+import { ApiTestComponent } from './api-test/api-test.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -50,6 +50,7 @@ import {RecetasComponent} from "./recetas/recetas.component";
     ButtonsComponent,
 
     MisDatosComponent,
+    ApiTestComponent,
     MisAtencionesComponent,
     InterconsultaComponent,
     SolicitudesComponent,

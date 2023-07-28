@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DemoMaterialModule } from 'src/app/demo-material-module';
-
+import { FhirApiService } from 'src/app/service/fhir-api.service';
 @Component({
   selector: 'app-profile',
   standalone: true,

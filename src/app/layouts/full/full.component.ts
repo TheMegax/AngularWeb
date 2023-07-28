@@ -28,4 +28,12 @@ export class FullComponent implements OnDestroy, AfterViewInit {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
   ngAfterViewInit() {}
+
+  goHomeBoy(): void {
+    window.location.href = "index.html"
+  }
+
+  openWebsite(site : string): void {
+    window.open(site, "_blank")
+  }
 }

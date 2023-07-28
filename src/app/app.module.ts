@@ -16,7 +16,7 @@ import { DemoMaterialModule } from './demo-material-module';
 
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
-
+import axios from 'axios';
 @NgModule({
   declarations: [
     AppComponent,

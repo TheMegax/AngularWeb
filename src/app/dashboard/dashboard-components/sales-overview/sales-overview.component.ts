@@ -29,7 +29,6 @@ export interface ChartOptions {
   legend: ApexLegend | any;
   grid: ApexGrid | any;
 }
-
 @Component({
   selector: "app-sales-overview",
   standalone: true,

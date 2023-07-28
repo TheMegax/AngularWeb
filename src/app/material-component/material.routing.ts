@@ -19,9 +19,9 @@ import {MisDatosComponent} from "./mis-datos/mis-datos.component";
 import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component";
 import {ImagenesComponent} from "./imagenes/imagenes.component";
 import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
-import {SolicitudesComponent} from "./solicitudes/solicitudes.component";
 import {RecetasComponent} from "./recetas/recetas.component";
-
+import {ApiTestComponent} from "./api-test/api-test.component";
+import {SolicitudesComponent} from "./solicitudes/solicitudes.component";
 export const MaterialRoutes: Routes = [
   {
     path: 'mis-datos',
@@ -30,6 +30,10 @@ export const MaterialRoutes: Routes = [
   {
     path: 'mis-atenciones',
     component: MisAtencionesComponent
+  },
+  {
+    path: 'api-test',
+    component: ApiTestComponent
   },
   {
     path: 'mis-imagenes',
