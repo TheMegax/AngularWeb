@@ -21,7 +21,7 @@ interface InternalString {
 export class MisDatosComponent {
   constructor(public snackBar: MatSnackBar) {}
 
-  step: number = 0;
+  step: number = 1;
   disabled = false;
 
   setStep(index: number) {
