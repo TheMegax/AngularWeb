@@ -32,6 +32,7 @@ import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import {ImagenesComponent} from "./imagenes/imagenes.component";
 import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {MisDatosComponent} from "./mis-datos/mis-datos.component";
+import {SolicitudesComponent} from "./solicitudes/solicitudes.component";
 
 @NgModule({
   imports: [
@@ -43,6 +44,7 @@ import {MisDatosComponent} from "./mis-datos/mis-datos.component";
     ReactiveFormsModule,
     CdkTableModule,
     ButtonsComponent,
+    SolicitudesComponent,
     ImagenesComponent,
     InterconsultaComponent,
     MisDatosComponent,

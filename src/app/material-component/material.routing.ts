@@ -21,6 +21,7 @@ import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {RecetasComponent} from "./recetas/recetas.component";
 
 import {MisDatosComponent} from "./mis-datos/mis-datos.component";
+import {SolicitudesComponent} from "./solicitudes/solicitudes.component";
 
 export const MaterialRoutes: Routes = [
   {
@@ -46,6 +47,10 @@ export const MaterialRoutes: Routes = [
   {
     path: 'interconsulta',
     component: InterconsultaComponent
+  },
+  {
+    path: 'solicitudes',
+    component: SolicitudesComponent
   },
   {
     path: 'lists',

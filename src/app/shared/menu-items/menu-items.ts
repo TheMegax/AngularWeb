@@ -12,6 +12,7 @@ const MENUITEMS = [
   { state: 'imagenes', name: 'Mis imagenes', type: 'link', icon: 'av_timer' },
   { state: 'interconsulta', name: 'Mis interconsultas', type: 'link', icon: 'av_timer' },
   { state: 'recetas', name: 'Mis recetas', type: 'link', icon: 'av_timer' },
+  { state: 'solicitudes', name: 'Mis solicitudes ciudadanas', type: 'link', icon: 'badge' },
   { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
   { state: 'mis-datos', type: 'link', name: 'Mis Datos', icon: 'badge' },
   { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
