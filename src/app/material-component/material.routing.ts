@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-
 import { ButtonsComponent } from './buttons/buttons.component';
 import { GridComponent } from './grid/grid.component';
 import { ListsComponent } from './lists/lists.component';
@@ -47,6 +46,10 @@ export const MaterialRoutes: Routes = [
   {
     path: 'mis-solicitudes',
     component: SolicitudesComponent
+  },
+  {
+    path: 'mis-recetas',
+    component: RecetasComponent
   },
   {
     path: 'button',
