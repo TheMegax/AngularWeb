@@ -17,15 +17,35 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import {MisDatosComponent} from "./mis-datos/mis-datos.component";
+import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component";
+import {ImagenesComponent} from "./imagenes/imagenes.component";
+import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
+import {SolicitudesComponent} from "./solicitudes/solicitudes.component";
 
 export const MaterialRoutes: Routes = [
   {
-    path: 'button',
-    component: ButtonsComponent
-  },
-  {
     path: 'mis-datos',
     component: MisDatosComponent
+  },
+  {
+    path: 'mis-atenciones',
+    component: MisAtencionesComponent
+  },
+  {
+    path: 'mis-imagenes',
+    component: ImagenesComponent
+  },
+  {
+    path: 'mis-interconsultas',
+    component: InterconsultaComponent
+  },
+  {
+    path: 'mis-solicitudes',
+    component: SolicitudesComponent
+  },
+  {
+    path: 'button',
+    component: ButtonsComponent
   },
   {
     path: 'grid',

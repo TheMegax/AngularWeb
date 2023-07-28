@@ -31,6 +31,11 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import {MisDatosComponent} from "./mis-datos/mis-datos.component";
+import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component";
+import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
+import {SolicitudesComponent} from "./solicitudes/solicitudes.component";
+import {ImagenesComponent} from "./imagenes/imagenes.component";
+import {RecetasComponent} from "./recetas/recetas.component";
 
 @NgModule({
   imports: [
@@ -43,7 +48,14 @@ import {MisDatosComponent} from "./mis-datos/mis-datos.component";
     CdkTableModule,
 
     ButtonsComponent,
+
     MisDatosComponent,
+    MisAtencionesComponent,
+    InterconsultaComponent,
+    SolicitudesComponent,
+    ImagenesComponent,
+    RecetasComponent,
+
     GridComponent,
     ListsComponent,
     MenuComponent,
