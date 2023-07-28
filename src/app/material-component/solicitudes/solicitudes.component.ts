@@ -4,9 +4,15 @@ import {NgForOf, NgIf} from "@angular/common";
 import {FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , ViewChild, AfterViewInit} from '@angular/core';
 import { MatStepperModule } from '@angular/material/stepper';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatTableDataSource} from "@angular/material/table";
+import {MatPaginator} from "@angular/material/paginator";
+import {RouterLink} from "@angular/router";
+//import {TablaFuturo} from "../mis-atenciones/mis-atenciones.component";
 //import { } from '@angular/forms';
 
 
@@ -15,10 +21,30 @@ interface InternalString {
   viewValue: string;
 }
 
+export interface TablaFuturo {
+  fecha_cita: string;
+  hora_cita: string;
+  tipo_atencion: string;
+  profesional: string;
+  especialidad: string;
+}
+
+const ELEMENT_FUTURO: TablaFuturo[] = [
+  {fecha_cita: "04/07/23", hora_cita: 'Queja', tipo_atencion: "29/07/23", profesional: 'En espera', especialidad: "PDF"},
+  {fecha_cita: "01/07/23", hora_cita: 'Queja', tipo_atencion: "26/07/23", profesional: 'Respondida', especialidad: "PDF"},
+  {fecha_cita: "24/03/23", hora_cita: 'Pregunta', tipo_atencion: "18/04/23", profesional: 'Respondida', especialidad: "PDF"},
+  {fecha_cita: "14/01/22", hora_cita: 'Pregunta', tipo_atencion: "8/02/22", profesional: 'Respondida', especialidad: "PDF"},
+  {fecha_cita: "-", hora_cita: '-', tipo_atencion: "-", profesional: '-', especialidad: "-"},
+  {fecha_cita: "-", hora_cita: '-', tipo_atencion:"-", profesional: '-', especialidad: "-"},
+  {fecha_cita: "-", hora_cita: '-', tipo_atencion: "-", profesional: '-', especialidad: "-"},
+  {fecha_cita: "-", hora_cita: '-', tipo_atencion: "-", profesional: '-', especialidad: "-"},
+  {fecha_cita: "-", hora_cita: '-', tipo_atencion: "-", profesional: '-', especialidad: "-"},
+  {fecha_cita: "-", hora_cita: '-', tipo_atencion: "-", profesional: '-', especialidad: "-"},
+];
 @Component({
   selector: 'app-mis-datos',
   standalone: true,
-  imports: [DemoMaterialModule, NgForOf, FormsModule, ReactiveFormsModule, NgIf],
+  imports: [DemoMaterialModule, NgForOf, FormsModule, ReactiveFormsModule, NgIf, DemoMaterialModule, MatSnackBarModule, FormsModule, MatButtonModule, MatFormFieldModule, RouterLink],
   templateUrl: './solicitudes.component.html',
   styleUrls: ['./solicitudes.component.scss']
 })
@@ -26,6 +52,26 @@ interface InternalString {
 
 
 export class SolicitudesComponent {
+
+  columnas_futuro: string[] = ['fecha_cita', 'hora_cita', 'tipo_atencion', 'profesional', 'especialidad'];
+  dataFuturo = new MatTableDataSource<TablaFuturo>(ELEMENT_FUTURO);
+
+  @ViewChild('paginator1')
+  paginator1!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataFuturo.paginator = this.paginator1;
+  }
+
+  _setDataSource(indexNumber : number) {
+    setTimeout(() => {
+      switch (indexNumber) {
+        case 0:
+          !this.dataFuturo.paginator ? this.dataFuturo.paginator = this.paginator1 : null;
+          break;
+      }
+    });
+  }
 
   isLinear = false;
   firstFormGroup: FormGroup = Object.create(null);
@@ -187,5 +233,5 @@ export class SolicitudesComponent {
 
     return this.email.hasError('email') ? 'No un email válido' : '';
   }
-  
+
 }
