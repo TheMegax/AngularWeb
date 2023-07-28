@@ -17,20 +17,15 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import {MisDatosComponent} from "./mis-datos/mis-datos.component";
-import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component";
 
 export const MaterialRoutes: Routes = [
   {
-    path: 'mis-datos',
-    component: MisDatosComponent
-  },
-  {
-    path: 'mis-atenciones',
-    component: MisAtencionesComponent
-  },
-  {
     path: 'button',
     component: ButtonsComponent
+  },
+  {
+    path: 'mis-datos',
+    component: MisDatosComponent
   },
   {
     path: 'grid',
