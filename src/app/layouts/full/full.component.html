@@ -26,6 +26,11 @@
                  <img src="assets/images/Hospital_Logo/blanco 2019-03.png" class="light-logo" alt="homepage">
                 </span> </a>
         </div>
+
+        <button mat-fab color="accent" class="profile-pic" (click)="goHomeBoy()">
+            <mat-icon>home</mat-icon>
+        </button>
+
         <!-- ============================================================== -->
         <!-- sidebar toggle -->
         <!-- ============================================================== -->
@@ -33,10 +38,51 @@
         <button mat-icon-button (click)="snav.toggle()" value="sidebarclosed">
             <mat-icon>menu</mat-icon>
         </button>
+
+        <button mat-icon-button color="accent"
+                class="m-r-5 p-0 d-flex jc-c align-items-center"
+                (click)="openWebsite('https://www.facebook.com/Hospital.Dra.EloisaDiaz/')">
+            <img src="assets/images/logo-facebook.png" alt="Facebook" class="small-icon">
+        </button>
+
+        <button mat-icon-button color="accent"
+                class="m-r-5 p-0 d-flex jc-c align-items-center"
+                (click)="openWebsite('https://www.instagram.com/hospitaldra.eloisadiaz/')">
+            <img src="assets/images/logo-instagram.png" alt="Instagram" class="small-icon">
+        </button>
+
+        <button mat-icon-button color="accent"
+                class="m-r-5 p-0 d-flex jc-c align-items-center"
+                (click)="openWebsite('https://twitter.com/Hosp_EloisaDiaz')">
+            <img src="assets/images/logo-twitter.png" alt="Twitter" class="small-icon">
+        </button>
+
+        <button mat-icon-button color="accent"
+                class="m-r-5 p-0 d-flex jc-c align-items-center"
+                (click)="openWebsite('https://api.whatsapp.com/send/?phone=56226121600&text&type=phone_number&app_absent=0')">
+            <img src="assets/images/logo-whatsapp.png" alt="Whatsapp" class="small-icon">
+        </button>
+
+        <button mat-icon-button color="accent"
+                class="m-r-5 p-0 d-flex jc-c align-items-center"
+                (click)="openWebsite('https://www.linkedin.com/company/hospital-eloisadiaz/')">
+            <img src="assets/images/logo-linkedin.png" alt="Linkedin" class="small-icon">
+        </button>
+
+        <button mat-icon-button color="accent"
+                class="m-r-5 p-0 d-flex jc-c align-items-center"
+                (click)="openWebsite('https://www.youtube.com/channel/UCkuRLzb2Tfru2uH7lFqLJLg/featured')">
+            <img src="assets/images/logo-youtube.png" alt="Youtube" class="small-icon">
+        </button>
+
         <!-- ============================================================== -->
         <!-- app header component - style you can find in header.scss / header.component.ts-->
         <!-- ============================================================== -->
+
+
         <app-header class="d-flex align-items-center ml-auto"></app-header>
+
+
     </mat-toolbar>
     <!-- ============================================================== -->
     <!-- End Topbar - style you can find in pages.scss -->
@@ -72,14 +118,12 @@
         <!-- ============================================================== -->
     </mat-sidenav-container>
 
-    <mat-toolbar style="min-height: 30px !important; height: 30px !important;">
-        <button mat-fab color="primary" aria-label="Boton de eliminar">
-            <mat-icon>delete</mat-icon>
-        </button>
-        <h4>
-            Todos los derechos reservados, 2023.<br>
-            Hospital Clínico Dra. Eloísa Díaz La Florida.
-        </h4>
 
-    </mat-toolbar>
+    <!-- Copyright -->
+    <div class="text-center" style="background-color: rgba(0, 0, 0, 0.1);">
+        <FONT COLOR="WHITE">
+        Todos los derechos reservados, 2023.<br>Hospital Clínico Dra. Eloísa Díaz La Florida
+        </FONT>
+    </div>
+    <!-- Copyright -->
 </div>

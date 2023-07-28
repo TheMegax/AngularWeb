@@ -7,10 +7,14 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSliderModule } from '@angular/material/slider';
 //import { DemoMaterialModule } from 'src/app/demo-material-module';
 
-import { Component } from '@angular/core';
-import { DemoMaterialModule } from 'src/app/demo-material-module';
+import {Component, ViewChild} from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
 import {FormControl, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+import {MatTableDataSource} from "@angular/material/table";
+import {MatPaginator} from "@angular/material/paginator";
+import {DemoMaterialModule} from "../../demo-material-module";
+import {RouterLink} from "@angular/router";
+
 
 
 interface Gender {
@@ -18,10 +22,31 @@ interface Gender {
   viewValue: string;
 }
 
+const ELEMENT_FUTURO: TablaFuturo[] = [
+  {fecha_cita: "04/07/23", hora_cita: 'Aguda', tipo_atencion: "29/07/23", profesional: 'Valida', especialidad: "PDF"},
+  {fecha_cita: "01/07/23", hora_cita: 'Cronica', tipo_atencion: "26/07/23", profesional: 'Valida', especialidad: "PDF"},
+  {fecha_cita: "24/03/23", hora_cita: 'Cronica', tipo_atencion: "18/04/23", profesional: 'Vencida', especialidad: "PDF"},
+  {fecha_cita: "14/01/22", hora_cita: 'Externa', tipo_atencion: "8/02/22", profesional: 'Vencida', especialidad: "PDF"},
+  {fecha_cita: "-", hora_cita: '-', tipo_atencion: "-", profesional: '-', especialidad: "-"},
+  {fecha_cita: "-", hora_cita: '-', tipo_atencion:"-", profesional: '-', especialidad: "-"},
+  {fecha_cita: "-", hora_cita: '-', tipo_atencion: "-", profesional: '-', especialidad: "-"},
+  {fecha_cita: "-", hora_cita: '-', tipo_atencion: "-", profesional: '-', especialidad: "-"},
+  {fecha_cita: "-", hora_cita: '-', tipo_atencion: "-", profesional: '-', especialidad: "-"},
+  {fecha_cita: "-", hora_cita: '-', tipo_atencion: "-", profesional: '-', especialidad: "-"},
+];
+
+export interface TablaFuturo {
+  fecha_cita: string;
+  hora_cita: string;
+  tipo_atencion: string;
+  profesional: string;
+  especialidad: string;
+}
+
 @Component({
   selector: 'app-progress',
   standalone: true,
-  imports: [DemoMaterialModule, FormsModule, ReactiveFormsModule, CommonModule, MatProgressBarModule, MatCardModule, MatRadioModule, NgIf, MatSliderModule, MatProgressBarModule],
+  imports: [NgForOf, FormsModule, ReactiveFormsModule, CommonModule, MatCardModule, MatRadioModule, NgIf, MatSliderModule, MatProgressBarModule, DemoMaterialModule, RouterLink],
   templateUrl: './recetas.component.html',
   styleUrls: ['./recetas.component.scss']
 })
@@ -33,6 +58,27 @@ export class RecetasComponent {
   mode:any = 'determinate';
   value = 50;
   bufferValue = 75;
+
+  columnas_futuro: string[] = ['fecha_cita', 'hora_cita', 'tipo_atencion', 'profesional', 'especialidad'];
+  dataFuturo = new MatTableDataSource<TablaFuturo>(ELEMENT_FUTURO);
+
+  @ViewChild('paginator1')
+  paginator1!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataFuturo.paginator = this.paginator1;
+  }
+
+  _setDataSource(indexNumber : number) {
+    setTimeout(() => {
+      switch (indexNumber) {
+        case 0:
+          !this.dataFuturo.paginator ? this.dataFuturo.paginator = this.paginator1 : null;
+          break;
+      }
+    });
+  }
+
   setStep(index: number) {
     this.step = index;
   }
@@ -80,17 +126,6 @@ export class RecetasComponent {
     return this.email.hasError('email') ? 'No un email vÃ¡lido' : '';
   }
 }
-//@Component({
-//  selector: 'app-progress',
-//  standalone: true,
-//  imports: [DemoMaterialModule, FormsModule, ReactiveFormsModule, CommonModule, MatProgressBarModule, MatCardModule, MatRadioModule, NgIf, MatSliderModule, MatProgressBarModule],
-//  templateUrl: './recetas.component.html',
-//  styleUrls: ['./recetas.component.scss']
-//})
-//export class RecetasComponent {
-//  color = 'primary';
-//  mode:any = 'determinate';
-//  value = 50;
-//  bufferValue = 75;
 
-//}
+
+
