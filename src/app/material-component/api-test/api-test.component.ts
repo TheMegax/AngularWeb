@@ -9,7 +9,14 @@ import { FhirApiService } from 'src/app/service/fhir-api.service';
 @Component({
   selector: 'app-snackbar',
   standalone: true,
-  imports: [CommonModule,DemoMaterialModule, MatSnackBarModule, FormsModule, MatButtonModule, MatFormFieldModule],
+  imports: [
+    CommonModule,
+    DemoMaterialModule,
+    MatSnackBarModule,
+    FormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+  ],
   templateUrl: './api-test.component.html',
   styleUrls: ['./api-test.component.scss'],
 })

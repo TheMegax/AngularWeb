@@ -22,7 +22,6 @@ import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {RecetasComponent} from "./recetas/recetas.component";
 import {ApiTestComponent} from "./api-test/api-test.component";
 import {SolicitudesComponent} from "./solicitudes/solicitudes.component";
-import {RecetasComponent} from "./recetas/recetas.component";
 export const MaterialRoutes: Routes = [
   {
     path: 'mis-datos',
