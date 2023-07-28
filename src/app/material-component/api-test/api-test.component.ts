@@ -6,6 +6,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { DemoMaterialModule } from 'src/app/demo-material-module';
 import { FhirApiService } from 'src/app/service/fhir-api.service';
+import { AuthService } from 'src/app/service/auth.service';
+import { environment } from 'src/environments/environment';
+
 @Component({
   selector: 'app-snackbar',
   standalone: true,
@@ -20,12 +23,27 @@ import { FhirApiService } from 'src/app/service/fhir-api.service';
   templateUrl: './api-test.component.html',
   styleUrls: ['./api-test.component.scss'],
 })
-export class ApiTestComponent {
+export class ApiTestComponent implements OnInit {
   data: any;
-  constructor(private fhirApiService: FhirApiService) {}
+
+  constructor(private fhirApiService: FhirApiService, private authService: AuthService) {}
+
   ngOnInit() {
-    this.getDataByRun();
+    this.getTokenAndGetData();
   }
+
+  private getTokenAndGetData() {
+    this.authService.getToken().subscribe((response: any) => {
+      const token = response.access_token;
+      console.log(token);
+      environment.apikey = token;
+      environment.oauthauth = token;
+
+      // Call getDataByRun here to ensure it's executed after getting the token
+      this.getDataByRun();
+    });
+  }
+
   getDataByRun() {
     this.fhirApiService.getPatientByRUN('666666666-14').then((res) => {
       console.log(res);

@@ -6,24 +6,25 @@ import { ActivityTimelineComponent } from './dashboard-components/activity-timel
 import { AuthService } from '../service/auth.service';
 import { environment } from 'src/environments/environment';
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [
-    SalesOverviewComponent,
-    ProfileComponent,
-    ActivityTimelineComponent,
-  ],
-  templateUrl: './dashboard.component.html',
+	selector: 'app-dashboard',
+	standalone: true,
+	imports: [SalesOverviewComponent, ProfileComponent, ActivityTimelineComponent],
+	templateUrl: './dashboard.component.html'
 })
 export class DashboardComponent implements AfterViewInit {
-  ngAfterViewInit() {}
-  constructor(private authService: AuthService) {}
 
-  getToken() {
-    this.authService.getToken().subscribe((response: any) => {
-      const token = response.access_token;
-      console.log(token);
-      environment.apikey = token;
-    });
-  }
+	ngAfterViewInit() { }
+
 }
+
+export class SomeComponent {
+	constructor(private authService: AuthService) {}
+  
+	getToken() {
+	  this.authService.getToken().subscribe((response: any) => {
+		const token = response.access_token;
+		console.log(token);
+		environment.apikey = token;
+	  });
+	}
+  }
