@@ -1,0 +1,35 @@
+<div class="row">
+  <!-- Card column -->
+  <div class="col-12">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Perfil del Usuario </mat-card-title>
+      </mat-card-content>
+
+      <mat-tab-group *ngIf="data">
+        <mat-tab label="API ID Usuario"
+          ><mat-card-content>
+            ID_DB: {{ data.entry[0].resource.id }}
+          </mat-card-content></mat-tab
+        >
+        <mat-tab label="Perfil Usuario"
+          ><mat-card-content *ngIf="data.entry[0].resource.name">
+            <b>Nombre:</b> {{ data.entry[0].resource.name[0].given }} {{ data.entry[0].resource.name[0].family }}</mat-card-content
+          >
+          <mat-card-content *ngIf="data.entry[0].resource.identifier">
+            <b>RUN:</b>
+            {{ data.entry[0].resource.identifier[0].value }}</mat-card-content
+          >
+          <mat-card-content *ngIf="data.entry[0].resource.address">
+            <b>Direccion:</b>
+            {{ data.entry[0].resource.address[0].line }}, {{ data.entry[0].resource.address[0].city }}, {{ data.entry[0].resource.address[0].district }}, {{ data.entry[0].resource.address[0].state }}</mat-card-content
+          >
+          <mat-card-content *ngIf="data.entry[0].resource.telecom">
+            <b>Email:</b>
+            {{ data.entry[0].resource.telecom[0].value }}</mat-card-content
+          ></mat-tab
+        >
+      </mat-tab-group>
+    </mat-card>
+  </div>
+</div>
