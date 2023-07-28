@@ -50,12 +50,12 @@
           </mat-select>
           <mat-error *ngIf="req_sexo.hasError('required')">{{'Debes seleccionar un valor'}}</mat-error>
         </mat-form-field>
-        <mat-checkbox [(ngModel)]="disabled">
+        <mat-checkbox [(ngModel)]="disabled" [disabled]="true">
           Transgénero
         </mat-checkbox>
         <mat-form-field [class.cdk-visually-hidden]="!disabled">
           <mat-label>Nombre Social </mat-label>
-          <input matInput placeholder="Ej: Jane"> </mat-form-field>
+          <input matInput placeholder="Ej: Jane" [formControl]="req_nombre_social"> </mat-form-field>
         <mat-action-row>
           <button mat-button color="primary" (click)="nextStep()">Siguiente</button>
         </mat-action-row>
