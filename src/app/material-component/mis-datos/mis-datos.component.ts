@@ -19,7 +19,7 @@ interface InternalString {
 })
 
 export class MisDatosComponent {
-  constructor(public snackBar: MatSnackBar) { }
+  constructor(public snackBar: MatSnackBar) {}
 
   step: number = 0;
   disabled = false;
@@ -44,7 +44,7 @@ export class MisDatosComponent {
 
   vias: InternalString[] = [
     {value: 'CALLE', viewValue: 'Calle'},
-    {value: 'CONDOMINIO', viewValue: 'Condominio'},
+    {value: 'AVENIDA', viewValue: 'Avenida'},
   ];
 
   regiones: InternalString[] = [
@@ -66,12 +66,13 @@ export class MisDatosComponent {
     {value: 'MA', viewValue: 'Región de Magallanes y de la Antártica Chilena'},
   ];
 
-  req_nombres = new FormControl('', [Validators.required])
-  req_apellido1 = new FormControl('', [Validators.required])
-  req_apellido2 = new FormControl('', [Validators.required])
-  req_edad = new FormControl('', [Validators.required])
-  req_rut = new FormControl('', [Validators.required])
-  req_sexo = new FormControl('', [Validators.required])
+  req_nombres = new FormControl({value: '', disabled: true}, [Validators.required])
+  req_apellido1 = new FormControl({value: '', disabled: true}, [Validators.required])
+  req_apellido2 = new FormControl({value: '', disabled: true}, [Validators.required])
+  req_edad = new FormControl({value: '', disabled: true}, [Validators.required])
+  req_rut = new FormControl({value: '', disabled: true}, [Validators.required])
+  req_sexo = new FormControl({value: '', disabled: true}, [Validators.required])
+  req_nombre_social = new FormControl({value: '', disabled: true})
   req_telefono = new FormControl('', [Validators.required])
   req_via = new FormControl('', [Validators.required])
   req_via_nombre = new FormControl('', [Validators.required])
