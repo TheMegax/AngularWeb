@@ -22,8 +22,6 @@ import {ImagenesComponent} from "./imagenes/imagenes.component";
 import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {RecetasComponent} from "./recetas/recetas.component";
 import {ApiTestComponent} from "./api-test/api-test.component";
-import {MisDatosComponent} from "./mis-datos/mis-datos.component";
-import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component";
 import {SolicitudesComponent} from "./solicitudes/solicitudes.component";
 export const MaterialRoutes: Routes = [
   {
@@ -39,8 +37,6 @@ export const MaterialRoutes: Routes = [
     component: ApiTestComponent
   },
   {
-    path: 'button',
-    component: ButtonsComponent
     path: 'mis-imagenes',
     component: ImagenesComponent
   },
