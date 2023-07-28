@@ -23,16 +23,19 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ProgressSnipperComponent } from './progress-snipper/progress-snipper.component';
 import { ProgressComponent } from './progress/progress.component';
 import {
-  DialogComponent
+  DialogComponent,
+  DialogOverviewExampleDialogComponent
 } from './dialog/dialog.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
-import {ImagenesComponent} from "./imagenes/imagenes.component";
-import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {MisDatosComponent} from "./mis-datos/mis-datos.component";
 import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component";
+import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
+import {SolicitudesComponent} from "./solicitudes/solicitudes.component";
+import {ImagenesComponent} from "./imagenes/imagenes.component";
+import {RecetasComponent} from "./recetas/recetas.component";
 import { ApiTestComponent } from './api-test/api-test.component';
 @NgModule({
   imports: [
@@ -43,12 +46,17 @@ import { ApiTestComponent } from './api-test/api-test.component';
     FormsModule,
     ReactiveFormsModule,
     CdkTableModule,
+
     ButtonsComponent,
-    ImagenesComponent,
-    InterconsultaComponent,
+
     MisDatosComponent,
     ApiTestComponent,
     MisAtencionesComponent,
+    InterconsultaComponent,
+    SolicitudesComponent,
+    ImagenesComponent,
+    RecetasComponent,
+
     GridComponent,
     ListsComponent,
     MenuComponent,
