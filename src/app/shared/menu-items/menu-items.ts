@@ -8,12 +8,13 @@ export interface Menu {
 }
 
 const MENUITEMS = [
-  { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
+  { state: 'dashboard', name: 'Inicio', type: 'link', icon: 'av_timer' },
   { state: 'mis-datos', type: 'link', name: 'Mis Datos', icon: 'badge' },
   { state: 'mis-atenciones', type: 'link', name: 'Mis Atenciones', icon: 'vaccines' },
   { state: 'mis-imagenes', type: 'link', name: 'Mis Imagenes', icon: 'perm_media' },
   { state: 'mis-interconsultas', type: 'link', name: 'Mis Interconsultas', icon: 'task_alt' },
   { state: 'mis-solicitudes', type: 'link', name: 'Mis Solicitudes', icon: 'question_answer' },
+  { state: 'mis-recetas', type: 'link', name: 'Mis Recetas', icon: 'medication' },
 ];
 
 @Injectable()

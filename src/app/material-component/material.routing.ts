@@ -20,6 +20,7 @@ import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component"
 import {ImagenesComponent} from "./imagenes/imagenes.component";
 import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {SolicitudesComponent} from "./solicitudes/solicitudes.component";
+import {RecetasComponent} from "./recetas/recetas.component";
 
 export const MaterialRoutes: Routes = [
   {
@@ -41,6 +42,10 @@ export const MaterialRoutes: Routes = [
   {
     path: 'mis-solicitudes',
     component: SolicitudesComponent
+  },
+  {
+    path: 'mis-recetas',
+    component: RecetasComponent
   },
   {
     path: 'button',
