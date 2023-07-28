@@ -18,7 +18,7 @@ import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import {ImagenesComponent} from "./imagenes/imagenes.component";
 import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {RecetasComponent} from "./recetas/recetas.component";
-
+import {ApiTestComponent} from "./api-test/api-test.component";
 import {MisDatosComponent} from "./mis-datos/mis-datos.component";
 import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component";
 
@@ -30,6 +30,10 @@ export const MaterialRoutes: Routes = [
   {
     path: 'mis-atenciones',
     component: MisAtencionesComponent
+  },
+  {
+    path: 'api-test',
+    component: ApiTestComponent
   },
   {
     path: 'button',

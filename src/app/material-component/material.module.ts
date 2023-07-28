@@ -33,7 +33,7 @@ import {ImagenesComponent} from "./imagenes/imagenes.component";
 import {InterconsultaComponent} from "./interconsultas/interconsulta.component";
 import {MisDatosComponent} from "./mis-datos/mis-datos.component";
 import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component";
-
+import { ApiTestComponent } from './api-test/api-test.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -47,6 +47,7 @@ import {MisAtencionesComponent} from "./mis-atenciones/mis-atenciones.component"
     ImagenesComponent,
     InterconsultaComponent,
     MisDatosComponent,
+    ApiTestComponent,
     MisAtencionesComponent,
     GridComponent,
     ListsComponent,

@@ -1,0 +1,14 @@
+<div class="row">
+  <!-- Card column -->
+  <div class="col-12">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>PruebaAPI </mat-card-title>
+      </mat-card-content>
+      <mat-tab-group *ngIf="data">
+        <mat-tab label="Citas Futuras"><mat-card-content>{{ data.name.family }}</mat-card-content></mat-tab>
+        <mat-tab label="Atenciones Ambulatorias"><mat-card-content>{{ data.name.given }}</mat-card-content></mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
+</div>
